@@ -1,0 +1,43 @@
+{
+  "info": {
+    "name": "PT Enigma - Produk API",
+    "_postman_id": "4ee5d1c4-3c6b-47fb-a442-6bb0e1a40d42",
+    "description": "Koleksi untuk menguji endpoint POST /products dengan background task.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Keyboard Mekanik\",\n  \"price\": 950000,\n  \"stock\": 12\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/products",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
+
